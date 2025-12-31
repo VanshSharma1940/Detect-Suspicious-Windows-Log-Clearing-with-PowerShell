@@ -41,7 +41,8 @@ $SplunkToken = "00000000-0000-0000-0000-000000000000"
 
 try {
     # 1. Timestamp Formatting
-    # WMI Time is often in DMTF format (e.g., 20251231141300.000000-000) or sometimes simplified. We treat it as a string for logging.
+    # WMI Time is often in DMTF format (e.g., 20251231141300.000000-000)
+    # or sometimes simplified. We treat it as a string for logging.
     $FormattedTime = $TimeGenerated
     
     # 2. Construct the Log Entry for Local Storage
@@ -75,8 +76,7 @@ Message   : $EventMessage
         $Payload = @{
             host = $ComputerName
             sourcetype = "wmi:logclear:alert"
-            source = "WMI_Defense_Script"what was the role of AWS,
-            and what all screenshots of AWS were to be taken
+            source = "WMI_Defense_Script"
             
             event = @{
                 message = $EventMessage

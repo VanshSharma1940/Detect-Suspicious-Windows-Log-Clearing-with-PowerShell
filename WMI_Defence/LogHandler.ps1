@@ -99,7 +99,8 @@ Message   : $EventMessage
 
 } catch {
     # Last resort error logging
-    # If the script fails (e.g., network down, file permission), we record it.
+
     $ErrorMsg = " Script Failure: $_"
     Add-Content -Path $ErrorLogPath -Value $ErrorMsg
 }
+
